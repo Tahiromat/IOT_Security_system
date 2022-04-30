@@ -1,6 +1,5 @@
 import smtplib
 from email.message import EmailMessage
-# hcmpugotdcymfzqf   # third party apps password for mail server
 
 
 def email_alert(subject, body, to):
@@ -11,7 +10,7 @@ def email_alert(subject, body, to):
 
     user = 'matahir33@gmail.com'
     msg['from'] = user
-    password = 'hcmpugotdcymfzqf'
+    password = '********'
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
