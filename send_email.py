@@ -10,7 +10,7 @@ def email_alert(subject, body, to):
 
     user = 'matahir33@gmail.com'
     msg['from'] = user
-    password = '********'
+    password = 'hcmpugotdcymfzqf'
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
@@ -18,6 +18,3 @@ def email_alert(subject, body, to):
     server.send_message(msg)
     server.quit()
 
-
-# if __name__ == '__main__':
-#   email_alert('Security problem', 'Some movements recognized', 'tahirmat@protonmail.com')
