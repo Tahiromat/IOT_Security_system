@@ -1,4 +1,4 @@
-## SEcurity System Monitoring App
+## Security System Monitoring App
 
 - For Raspberry Pi
 - First we will activate raspi and if any movement happend in the range of camera then algorithm will catch the action and save it as a pic
