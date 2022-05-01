@@ -1,8 +1,3 @@
-"""
-    Firebaseden gelen videolar üzerinde Algoritmik aramalar yapılacak 
-        ML, DL algoritmalarından biri seçilecek.
-"""
-
 import streamlit as st
 from PIL import Image
 from get_images_from_db import get_all_images_from_firebase

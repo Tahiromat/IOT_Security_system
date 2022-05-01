@@ -54,7 +54,7 @@ while cam.isOpened():
             email_alert('Security problem', 'Some movements recognized', 'tahirmat@protonmail.com')
 
             i += 1
-            
+          
     if cv2.waitKey(10) == ord('q'):
         break
 

@@ -67,3 +67,4 @@ pil_image.show()
 
 # Save image
 pil_image.save('RecognitionFaces/Identify_faces/identify.jpg')
+

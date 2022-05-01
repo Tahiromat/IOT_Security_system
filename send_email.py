@@ -1,7 +1,6 @@
 import smtplib
 from email.message import EmailMessage
 
-
 def email_alert(subject, body, to):
     msg = EmailMessage()
     msg.set_content(body)
@@ -10,7 +9,7 @@ def email_alert(subject, body, to):
 
     user = 'matahir33@gmail.com'
     msg['from'] = user
-    password = '***'
+    password = 'hcmpugotdcymfzqf'
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
