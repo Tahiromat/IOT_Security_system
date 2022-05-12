@@ -1,9 +1,7 @@
 import os
 import pyrebase
 
-
 def send_images_to_firebase(f_name, path):
-
     firebaseConfig = {
         "apiKey": "AIzaSyBHtIh3LujbC_-usf7HwJyHn7-ovhBlh_0",
         "authDomain": "iotsecuritysystem.firebaseapp.com",
@@ -15,8 +13,6 @@ def send_images_to_firebase(f_name, path):
         "measurementId": "G-F41WK5LJWT",
         "serviceAccount": "serviceAccountKey.json"
     }
-
     firebase_storage = pyrebase.initialize_app(firebaseConfig)
     storage = firebase_storage.storage()
-
     storage.child(f_name).put(path)

@@ -9,9 +9,6 @@ from indentify import indentify_faces
 MAINPATH = "DownloadedImages/"
 IDENTIFIED_PATH ='Identify_faces/'
 
-image_list_from_storage = get_all_images_from_firebase()
-# vid_str()
-
 with st.sidebar:
     st.markdown("###")
     st.markdown('Choose type')
@@ -19,9 +16,12 @@ with st.sidebar:
         icons=['list-task', 'list-task',], 
         menu_icon="cast", default_index=0, orientation="vertical")
 
+# vid_str()
+
 if selected_page == "Captured":
-    st.title("CAPTURED IMAGES !")
-    for image in image_list_from_storage:
+    st.title("IMAGES FROM STORAGE !")
+    # for image in image_list_from_storage:
+    for image in os.listdir(MAINPATH):
         path = MAINPATH + image
         img = Image.open(path)
         st.image(img, caption=image)

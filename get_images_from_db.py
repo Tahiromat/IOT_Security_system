@@ -2,9 +2,7 @@ import os
 import pyrebase
 
 def get_all_images_from_firebase():
-  
   images_list = []
-
   firebaseConfig = {
     "apiKey": "AIzaSyBHtIh3LujbC_-usf7HwJyHn7-ovhBlh_0",
     "authDomain": "iotsecuritysystem.firebaseapp.com",
@@ -16,17 +14,11 @@ def get_all_images_from_firebase():
     "measurementId": "G-F41WK5LJWT",
     "serviceAccount": "serviceAccountKey.json"
   }
-
   firebase_storage = pyrebase.initialize_app(firebaseConfig)
   storage = firebase_storage.storage()
-
   all_files = storage.list_files()
-
   for file in all_files:
     file.download_to_filename("DownloadedImages/"+file.name)
-
-
-  for file in os.listdir("/home/tahir/Documents/DataScience/IOTProject/DownloadedImages"):
+  for file in os.listdir("DownloadedImages/"):
     images_list.append(file)
-
   return images_list

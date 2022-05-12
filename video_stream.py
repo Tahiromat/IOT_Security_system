@@ -3,6 +3,7 @@ import cv2
 from datetime import datetime
 from cv2 import rectangle
 from send_images_to_db import send_images_to_firebase
+from get_images_from_db import get_all_images_from_firebase
 from send_email import email_alert
 from indentify import indentify_faces
 
@@ -35,10 +36,11 @@ def vid_str():
                 send_images_to_firebase(f_name, path)
                 print(f"[INFO {i}]---  Security Alert is Created For: {f_name}  Image\n\n\n")
                 email_alert('Security problem', 'Some movements recognized', 'tahirmat@protonmail.com')
+                # Get All images from storage
+                get_all_images_from_firebase()
                 # If image indentify then save to indentify faces folder
                 indentify_faces(path)
                 i += 1
         if cv2.waitKey(10) == ord('q'):
             break
-
         # cv2.imshow('REAL TIME CAM', frame1)
