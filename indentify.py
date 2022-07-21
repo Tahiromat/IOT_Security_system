@@ -6,11 +6,16 @@ import os
 def indentify_faces(image_name):
   image_of_tahir = face_recognition.load_image_file('known/Tahir Mat.jpeg')
   tahir_face_encoding = face_recognition.face_encodings(image_of_tahir)[0]
+
   image_of_emre = face_recognition.load_image_file('known/Emre Görkem.jpeg')
   emre_face_encoding = face_recognition.face_encodings(image_of_emre)[0]
+
+  image_of_adem = face_recognition.load_image_file('known/Adem Yılmaz.jpeg')
+  adem_face_encoding = face_recognition.face_encodings(image_of_adem)[0]
+  
   #  Create arrays of encodings and names
-  known_face_encodings = [emre_face_encoding, tahir_face_encoding,]
-  known_face_names = ["Emre Görkem", "Tahir Mat",]
+  known_face_encodings = [emre_face_encoding, tahir_face_encoding, adem_face_encoding]
+  known_face_names = ["Emre Görkem", "Tahir Mat", "Adem Yılmaz"]
   # Load test image to find faces in
   test_image = face_recognition.load_image_file(image_name)
   # Find faces in test image
